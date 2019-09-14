@@ -2,7 +2,7 @@
 Application mobile pour les clients des pharmacies pharmacies.
 Elle offre les fonctionnalités:
 
-1- Création d'un compte et l'aythentification
+1- Création d'un compte et l'athentification
 
 2- Affichage des pharmacies par villes
 
