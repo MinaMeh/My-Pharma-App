@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools" android:id="@+id/navigation_pharmacie"
+            app:startDestination="@id/pharmacieFragment2">
+
+    <fragment android:id="@+id/pharmacieFragment2" android:name="com.example.mypharma.Views.PharmacieFragment"
+              android:label="fragment_pharmacie" tools:layout="@layout/fragment_pharmacie">
+        <action android:id="@+id/action_pharmacieFragment2_to_pharmacieDetailsFragment2"
+                app:destination="@id/pharmacieDetailsFragment2"/>
+    </fragment>
+    <fragment android:id="@+id/pharmacieDetailsFragment2"
+              android:name="com.example.mypharma.Views.PharmacieDetailsFragment"
+              android:label="fragment_pharmacie_details" tools:layout="@layout/fragment_pharmacie_details"/>
+</navigation>

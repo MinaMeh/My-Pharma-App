@@ -1,0 +1,33 @@
+var express = require("express");
+var mysql = require("mysql");
+var app = express();
+var multer = require('multer')
+
+var BosyParser= require("body-parser");
+app.use(express.static('public'));
+
+app.use(BosyParser.json());
+var fs = require('fs');
+var path = require('path');
+var crypto = require('crypto');
+
+
+//database connection
+var connection = mysql.createConnection({
+    host     : 'localhost',
+    user     : 'root',
+    password : 'rootroot',
+    database:'MyPharma'
+});
+ const upload = multer({dest: __dirname + '/public/uploads/images'});
+ app.post('/upload', upload.single('photo'), (req, res) => {
+    file=req.file
+    if(file) {
+        console.log(file)
+        //res.redirect("/uploads/" + file.filename);
+        res.send(JSON.stringify(file.filename));
+        console.log(file.filename)
+        
+    }
+    else throw 'error';
+});

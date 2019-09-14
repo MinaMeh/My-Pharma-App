@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools" android:id="@+id/navigation"
+            app:startDestination="@id/welcomeFragment">
+
+    <fragment android:id="@+id/welcomeFragment" android:name="com.example.mypharma.Views.WelcomeFragment"
+              android:label="My Pharma" tools:layout="@layout/fragment_welcome">
+        <action android:id="@+id/action_welcomeFragment_to_signupFragment" app:destination="@id/signupFragment"
+                app:enterAnim="@anim/nav_default_enter_anim" app:popEnterAnim="@anim/nav_default_enter_anim"
+                app:exitAnim="@anim/nav_default_exit_anim" app:popExitAnim="@anim/nav_default_pop_exit_anim"/>
+        <action android:id="@+id/action_welcomeFragment_to_loginFragment" app:destination="@id/loginFragment"
+                app:enterAnim="@anim/nav_default_enter_anim"/>
+    </fragment>
+    <fragment android:id="@+id/signupFragment" android:name="com.example.mypharma.Views.signupFragment"
+              android:label="Créer un compte" tools:layout="@layout/fragment_signup">
+        <action android:id="@+id/action_signupFragment_to_confirmFragment" app:destination="@id/confirmFragment"
+                app:enterAnim="@anim/nav_default_enter_anim"/>
+    </fragment>
+    <fragment android:id="@+id/confirmFragment" android:name="com.example.mypharma.Views.confirmFragment"
+              android:label="Activer le compte" tools:layout="@layout/fragment_confirm">
+        <action android:id="@+id/action_confirmFragment_to_changePasswdFragment"
+                app:destination="@+id/changePasswdFragment" app:enterAnim="@anim/nav_default_enter_anim"/>
+    </fragment>
+    <fragment android:id="@+id/changePasswdFragment" android:name="com.example.mypharma.Views.changePasswdFragment"
+              android:label="Changer le mot dde passe" tools:layout="@layout/fragment_changepasswd"/>
+    <fragment android:id="@+id/loginFragment" android:name="com.example.mypharma.Views.LoginFragment"
+              android:label="Se connecter" tools:layout="@layout/fragment_login"/>
+
+</navigation>

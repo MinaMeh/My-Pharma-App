@@ -1,0 +1,22 @@
+override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+         super.onViewCreated(view, savedInstanceState)
+         Toast.makeText(activity,"suivat clicked", Toast.LENGTH_SHORT)
+         suivant.setOnClickListener { view ->
+             view.findNavController().navigate(R.id.action_confirmFragment_to_changePasswdFragment)
+            /* Toast.makeText(activity,"suivat clicked", Toast.LENGTH_SHORT)
+
+             val passwd= arguments?.getString("password")
+             val nss= arguments?.getInt("nss")
+             Toast.makeText(activity,"password"+ passwd+ "passwd"+password.text.toString(), Toast.LENGTH_SHORT)
+
+             if (password.text.toString()==passwd) {
+                 val bundle= bundleOf("nss" to nss)
+                 view.findNavController().navigate(R.id.action_confirmFragment_to_changePasswdFragment, bundle)
+             }
+             else{
+                 Toast.makeText(activity,"Veuillez confirmer le code d'activation", Toast.LENGTH_SHORT)
+             }*/
+         }
+
+     }
+

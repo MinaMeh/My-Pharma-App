@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+<androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+                                                   android:layout_height="match_parent"
+                                                   tools:context=".Views.CommandeDetailsFragment"
+                                                   android:id="@+id/frameLayout7">
+
+    <com.google.android.material.chip.Chip
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/etat"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView10"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/date"
+            app:layout_constraintHorizontal_bias="0.0"
+            android:layout_marginTop="8dp" app:layout_constraintTop_toTopOf="@+id/imageView10"/>
+
+    <TextView
+            android:text="TextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/pharmacie"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView9"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+            app:layout_constraintTop_toTopOf="@+id/imageView9"
+            app:layout_constraintStart_toEndOf="@+id/imageView9"
+            android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="8dp" app:layout_constraintHorizontal_bias="0.0"/>
+    <TextView
+            android:text="TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/date" app:layout_constraintTop_toTopOf="@+id/imageView8"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView8"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+            app:layout_constraintStart_toEndOf="@+id/imageView8" app:layout_constraintHorizontal_bias="0.0"
+            android:layout_marginStart="8dp"/>
+    <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" tools:src="@tools:sample/avatars"
+            android:id="@+id/photo"
+            app:layout_constraintTop_toBottomOf="@+id/amnt" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="24dp" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintVertical_bias="0.0"
+            android:layout_marginBottom="32dp" android:layout_marginEnd="24dp"/>
+    <ProgressBar
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" android:id="@+id/progressBar5" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toTopOf="parent" android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+    <ImageView
+            android:src="@mipmap/date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView8" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="16dp" app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="16dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp" app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.0" app:layout_constraintVertical_bias="0.0"/>
+    <ImageView
+            android:src="@mipmap/adresse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@+id/imageView8"
+            android:id="@+id/imageView9" app:layout_constraintTop_toBottomOf="@+id/imageView8"
+            app:layout_constraintEnd_toEndOf="@+id/imageView8"
+            android:layout_marginBottom="8dp" app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintVertical_bias="0.0"/>
+    <ImageView
+            android:src="@mipmap/state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView10"
+            app:layout_constraintTop_toBottomOf="@+id/imageView9" app:layout_constraintStart_toStartOf="@+id/imageView9"
+            app:layout_constraintEnd_toEndOf="@+id/imageView9" android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintVertical_bias="0.0"/>
+    <Button
+            android:text="Payer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/payer"
+            android:visibility="invisible"
+            app:layout_constraintTop_toTopOf="@+id/amount" app:layout_constraintBottom_toBottomOf="@+id/amount"
+            android:layout_marginStart="8dp"
+            app:layout_constraintStart_toEndOf="@+id/amount" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.858" app:layout_constraintVertical_bias="0.481"/>
+    <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" app:srcCompat="@mipmap/amount"
+            android:id="@+id/amnt"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:visibility="invisible" app:layout_constraintTop_toBottomOf="@+id/imageView10"
+            app:layout_constraintVertical_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/imageView10"
+            app:layout_constraintEnd_toEndOf="@+id/imageView10"/>
+    <TextView
+            android:text="TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/amount"
+            android:visibility="invisible"
+            app:layout_constraintTop_toTopOf="@+id/amnt"
+            app:layout_constraintBottom_toBottomOf="@+id/amnt" app:layout_constraintStart_toEndOf="@+id/amnt"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0" android:layout_marginStart="16dp"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

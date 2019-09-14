@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                   xmlns:tools="http://schemas.android.com/tools"
+                                                   android:layout_width="match_parent"
+                                                   android:layout_height="match_parent"
+                                                   tools:context=".Views.WelcomeFragment" android:id="@+id/constraintLayout">
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="50dp" app:layout_constraintEnd_toEndOf="parent"
+    >
+        <Button
+                android:text="@string/createAccount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/signup"
+                android:paddingLeft="20dp"
+                android:drawableLeft="@mipmap/create_account" android:background="@drawable/btn_rounded"
+                android:layout_marginBottom="8dp" android:layout_marginTop="8dp"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+                android:textColor="@color/white"/>
+        <Button
+                android:text="@string/signin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/signin"
+                android:layout_marginBottom="8dp"
+                android:drawableLeft="@mipmap/signup"
+                android:background="@drawable/btn_rounded"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+                android:textColor="@color/white" android:layout_marginTop="8dp"/>
+        <Button
+                android:text="@string/guest"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/guest"
+                android:background="@drawable/btn_rounded" android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:drawableLeft="@mipmap/guest"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+                android:textColor="@color/white"/>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

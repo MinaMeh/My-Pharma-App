@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+            android:id="@+id/pharmacieFragment"
+            android:icon="@drawable/ic_home_black_24dp"
+            android:title="Pharmacies"/>
+
+    <item
+            android:id="@+id/commandesFragment"
+            android:icon="@drawable/ic_dashboard_black_24dp"
+            android:title="Commandes"/>
+
+    <item
+            android:id="@+id/accountFragment"
+            android:icon="@mipmap/signup"
+            android:title="Compte"/>
+
+</menu>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools" android:id="@+id/navigation2"
+            app:startDestination="@id/pharmacieFragment">
+
+    <fragment android:id="@+id/commandesFragment" android:name="com.example.mypharma.Views.CommandesFragment"
+              android:label="Commandes" tools:layout="@layout/fragment_commandes">
+        <action android:id="@+id/action_commandesFragment_to_commandeDetailsFragment"
+                app:destination="@id/commandeDetailsFragment"/>
+        <action android:id="@+id/action_commandesFragment_to_selectPharmacieFragment"
+                app:destination="@id/selectPharmacieFragment"/>
+    </fragment>
+    <fragment android:id="@+id/accountFragment" android:name="com.example.mypharma.Views.AccountFragment"
+              android:label="Compte" tools:layout="@layout/fragment_account"/>
+    <fragment android:id="@+id/pharmacieFragment" android:name="com.example.mypharma.Views.PharmacieFragment"
+              android:label="Pharmacies" tools:layout="@layout/fragment_pharmacie">
+        <action android:id="@+id/action_pharmacieFragment_to_pharmacieDetailsFragment"
+                app:destination="@id/pharmacieDetailsFragment"/>
+    </fragment>
+    <fragment android:id="@+id/pharmacieDetailsFragment"
+              android:name="com.example.mypharma.Views.PharmacieDetailsFragment"
+              android:label="Pharmacie" tools:layout="@layout/fragment_pharmacie_details"/>
+    <fragment android:id="@+id/selectPharmacieFragment"
+              android:name="com.example.mypharma.Views.SelectPharmacieFragment"
+              android:label="choisir une pharmacie" tools:layout="@layout/fragment_select_pharmacie">
+        <action android:id="@+id/action_selectPharmacieFragment_to_addCommandeFragment"
+                app:destination="@id/addCommandeFragment"/>
+    </fragment>
+    <fragment android:id="@+id/addCommandeFragment" android:name="com.example.mypharma.Views.addCommandeFragment"
+              android:label="Ajouter une commande" tools:layout="@layout/fragment_add_commande">
+        <action android:id="@+id/action_addCommandeFragment_to_commandesFragment"
+                app:destination="@id/commandesFragment"/>
+    </fragment>
+    <fragment android:id="@+id/commandeDetailsFragment"
+              android:name="com.example.mypharma.Views.CommandeDetailsFragment"
+              android:label="Commande" tools:layout="@layout/fragment_commande_details"/>
+    <fragment android:id="@+id/nearestPharmaciesFragment"
+              android:name="com.example.mypharma.Views.NearestPharmaciesFragment"
+              android:label="fragment_nearest_pharmacies" tools:layout="@layout/fragment_nearest_pharmacies"/>
+</navigation>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools" android:id="@+id/commandes_navigation"
+            app:startDestination="@id/commandesFragment2">
+
+    <fragment android:id="@+id/commandesFragment2" android:name="com.example.mypharma.Views.CommandesFragment"
+              android:label="fragment_commandes" tools:layout="@layout/fragment_commandes">
+        <action android:id="@+id/action_commandesFragment2_to_selectVilleFragment2"
+                app:destination="@id/selectVilleFragment2"/>
+        <action android:id="@+id/action_commandesFragment2_to_commandeDetailsFragment2"
+                app:destination="@id/commandeDetailsFragment2"/>
+    </fragment>
+    <fragment android:id="@+id/addCommandeFragment2" android:name="com.example.mypharma.Views.addCommandeFragment"
+              android:label="fragment_add_commande" tools:layout="@layout/fragment_add_commande">
+        <action android:id="@+id/action_addCommandeFragment2_to_commandesFragment2"
+                app:destination="@id/commandesFragment2"/>
+    </fragment>
+    <fragment android:id="@+id/commandeDetailsFragment2"
+              android:name="com.example.mypharma.Views.CommandeDetailsFragment"
+              android:label="fragment_commande_details" tools:layout="@layout/fragment_commande_details"/>
+    <fragment android:id="@+id/selectVilleFragment2" android:name="com.example.mypharma.Views.SelectVilleFragment"
+              android:label="fragment_select_ville" tools:layout="@layout/fragment_select_ville">
+        <action android:id="@+id/action_selectVilleFragment2_to_selectPharmacieFragment3"
+                app:destination="@id/selectPharmacieFragment3"/>
+    </fragment>
+    <fragment android:id="@+id/selectPharmacieFragment3"
+              android:name="com.example.mypharma.Views.SelectPharmacieFragment"
+              android:label="fragment_select_pharmacie" tools:layout="@layout/fragment_select_pharmacie">
+        <action android:id="@+id/action_selectPharmacieFragment3_to_addCommandeFragment2"
+                app:destination="@id/addCommandeFragment2"/>
+    </fragment>
+</navigation>
